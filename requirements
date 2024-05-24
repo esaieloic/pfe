@@ -1,0 +1,6 @@
+Pour ce projet vous aurez besoin d'installer des packages pour faire fonctionner le code.
+pour la partie react il vous faut :
+- react js , installation : npx create-react-app mon-projet.
+
+pour la partie django il vous faut :
+- django, installation : pip install Django. 
