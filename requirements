@@ -1,3 +1,8 @@
+D'abord le projet est constitué de 3 dossiers. Nous avons :
+- SRC dans lequel se trouve les composants react;
+- API le code de l'api django;
+- MY SERVER le code de config du server.
+
 Pour ce projet vous aurez besoin d'installer des packages pour faire fonctionner le code.
 pour la partie react il vous faut :
 - react js , installation : npx create-react-app mon-projet.
