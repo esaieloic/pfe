@@ -1,24 +1,59 @@
-import { useState } from 'react'
-import Banner from './Banner.js';
-import Cart from './Cart.js';
-import ShoppingList from './ShoppingList.js';
-import Footer from './Footer';
-import '../styles/App.css'
+import '../styles/App.css';
+import Dashboard from './dashboard/Dashboard';
+import Connexion from './login/Connexion';
+import Users from './dashboard/Users.jsx'
+import Serveurs from './dashboard/Serveurs.jsx'
+import Applications from './dashboard/Applications.jsx'
+import Profile  from './dashboard/Profile.jsx'
+import { createBrowserRouter, RouterProvider} from "react-router-dom";
+
 
 function App() {
-  const [cart, updateCart] = useState([])
 
+  const router_app = createBrowserRouter([
+    {
+      path: "/",
+      element: (
+        <Connexion/>
+      )
+    },
+    {
+      path: "/login",
+      element: (
+        <Connexion/>
+      )
+    },
+    {
+      path: "/dashboard",
+      element: (
+        <Dashboard/>
+      )
+    },
+    {
+      path: "/dashboard/user",
+      element: <Users/>
+    },
+    {
+        path: "/dashboard/server",
+        element: <Serveurs/>
+    },
+    {
+        path: "/dashboard/application",
+        element: <Applications/>
+    },
+    {
+        path: "/dashboard/profile",
+        element: <Profile/>
+    },
+  ]);
+  
   return (
     <div>
-      <Banner/>
-      <div className='lmj-layout-inner'>
-				<Cart cart={cart} updateCart={updateCart} />
-				<ShoppingList cart={cart} updateCart={updateCart} />
-			</div>
-      <Footer/>
+      <RouterProvider router={router_app}/>
     </div>
-  )
-  
+  );
+
 }
+
 
 export default App;
