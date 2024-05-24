@@ -1,5 +1,5 @@
 D'abord le projet est constitué de 3 dossiers. Nous avons :
-- SRC dans lequel se trouve les composants react;
+- SRC dans lequel se trouve les composants, les fichiers de styles, et les images utilisés dans le projet react;
 - API le code de l'api django;
 - MY SERVER le code de config du server.
 
